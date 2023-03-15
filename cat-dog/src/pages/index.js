@@ -21,7 +21,14 @@ export default function Home() {
       </Head>
       <main>
         <Nav />
-        
+        <div className="body-wrapper">
+          <div className="body"></div>
+          <div className="button-wrapper">
+            <button className="bodybtn">Events</button>
+            <button className="bodybtn">RSVP</button>
+            <button className="bodybtn">Donate</button>
+          </div>
+        </div>
         <Footer />
       </main>
     </>

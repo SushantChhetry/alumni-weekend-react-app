@@ -16,6 +16,13 @@ body {
   color: #333;
 }
 
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .footer{
   position: fixed;
     bottom: 0;
@@ -24,4 +31,54 @@ body {
     color: #fff;
     padding: 1rem;
     margin: 0;
+}
+
+.navbtn{
+  color: wheat;
+  font-size: 5vw
+}
+
+.nav{
+  width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    margin: 0;
+}
+
+.body-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.body{
+  width: 100%;
+  background-color: rgb(119, 28, 28);
+  height: 60vh;
+  margin: 0;
+}
+
+.bodybtn{
+  background-color: #af4c4c;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+    .bodybtn:hover {
+    background-color: #af4c4c;
+}
+
+.button-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3vh;
+  padding: 5vw;
 }

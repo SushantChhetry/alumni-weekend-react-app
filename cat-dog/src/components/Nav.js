@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +12,9 @@ const Nav = () => {
   };
 
   return (
-    <div>
+    <div className="nav">
       <button onClick={toggleMenu}>
-        <i className="fa fa-bars"></i>
+        <FontAwesomeIcon icon={faBars} className="navbtn" />
         {isOpen ? (
           <div className="mobile-menu">{/*insert links to mobile menu*/}</div>
         ) : (
