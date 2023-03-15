@@ -1,9 +1,28 @@
-import React from 'react'
+import { useState } from "react";
 
 const Nav = () => {
-  return (
-    <div>Nav</div>
-  )
-}
+  const [isOpen, setIsOpen] = useState(false);
 
-export default Nav
+  const toggleMenu = () => {
+    console.log(isOpen);
+
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div>
+      <button onClick={toggleMenu}>
+        <i className="fa fa-bars"></i>
+        {isOpen ? (
+          <div className="mobile-menu">{/*insert links to mobile menu*/}</div>
+        ) : (
+          <div className="desktop-menu">
+            {/** insert links to desktop menu */}
+          </div>
+        )}
+      </button>
+    </div>
+  );
+};
+
+export default Nav;
