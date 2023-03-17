@@ -5,7 +5,11 @@ import styles from "@/styles/Home.module.css";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import Countdown from "@/components/Countdown";
+import Slider from "@/components/Slider";
+import Number from "@/components/Number";
 import group from "../img/group.jpg";
+import Contact from "./Contact";
+import About from "./About";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +31,7 @@ export default function Home() {
         <Nav />
         <div className="body-wrapper">
           <div className="body">
-            <img src="../img/group.jpg" alt="home"></img>
+            <Slider />
           </div>
           <Countdown targetDate={targetDate} />
           <div className="button-wrapper">
@@ -36,10 +40,8 @@ export default function Home() {
             <button className="bodybtn">Donate</button>
           </div>
         </div>
-        <section>
-          <h2>Events</h2>
-          <h2>Contact</h2>
-        </section>
+        <About />
+        <Contact />
       </main>
       <Footer />
     </>
