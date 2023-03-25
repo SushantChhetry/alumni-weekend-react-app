@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
 
-const Number = () => {
-  const [number, setNumber] = useState(0);
+const Number = ({ num }) => {
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setNumber((prevNumber) => prevNumber + 1);
+      if (count < num) {
+        setCount(count + 1);
+      }
     }, 100);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [num, count]);
 
-  return <div className="number">{number}</div>;
+  return <div className="number">{count}</div>;
 };
 export default Number;

@@ -13,7 +13,6 @@ const Slider = () => {
   }, [activeIndex]);
 
   const images = [
-   
   ];
 
   return (

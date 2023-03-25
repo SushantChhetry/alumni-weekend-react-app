@@ -30,9 +30,7 @@ export default function Home() {
       <main>
         <Nav />
         <div className="body-wrapper">
-          <div className="body">
-            <Slider />
-          </div>
+          <div className="body"></div>
           <Countdown targetDate={targetDate} />
           <div className="button-wrapper">
             <button className="bodybtn">Events</button>
