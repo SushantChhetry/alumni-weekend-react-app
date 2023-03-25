@@ -59,6 +59,8 @@ img{
 .body-wrapper{
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 }
 
 .body{
@@ -201,9 +203,18 @@ button[type="submit"]:hover {
       flex-direction: column;
       text-align: center;
       padding: 20%;
-      gap:10%
+      justify-content: space-around;
   }
 
+  .event{
+    color: wheat;
+    background-color: rgb(119, 28, 28);
+    padding: 10%;
+  }
   
+  a{
+    text-decoration: none;
+    color: wheat;
+  }
 
 

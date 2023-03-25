@@ -7,21 +7,28 @@ const Event = () => {
       title: "Welcome Mixer",
       time: "7:00 PM",
       location: "Peerless Grille and Salon",
+      lat: "33.65760295726795",
+      lng: "-85.83040843066253",
       note: "21+",
     },
     {
       title: "The Cookout",
       time: "3:00 - 5:00 PM",
       location: "International House",
+      lat: "33.82549295263616",
+      lng: "-85.76485300070841",
       note: "",
     },
     {
       title: "The After Party",
       time: "8:00 PM",
       location: "Alumni's house",
+      lat: "",
+      lng: "",
       note: "21+",
     },
   ];
+
   return (
     <div className="event-wrapper">
       <h1>Event</h1>
@@ -30,8 +37,15 @@ const Event = () => {
           <div className="event" id={key}>
             <h3>{event.title}</h3>
             <br />
-            <p>Time: {event.time}</p>
-            <p>Location: {event.location}</p>
+            <p> {event.time}</p>
+            <p>
+              <a
+                href={`https://www.google.com/maps?q=${event.lat},${event.lng}`}
+                target="_blank"
+              >
+                {event.location}
+              </a>
+            </p>
             {event.note ? event.note : ""}
           </div>
         );
