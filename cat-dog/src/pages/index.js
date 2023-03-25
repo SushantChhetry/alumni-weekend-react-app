@@ -10,6 +10,7 @@ import Number from "@/components/Number";
 import group from "../img/group.jpg";
 import Contact from "./Contact";
 import About from "./About";
+import Event from "./Event";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,6 +40,7 @@ export default function Home() {
           </div>
         </div>
         <About />
+        <Event />
         <Contact />
       </main>
     </>

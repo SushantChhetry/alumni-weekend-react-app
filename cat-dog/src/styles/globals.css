@@ -194,4 +194,16 @@ button[type="submit"]:hover {
     padding: 4%;
   }
 
+  .event-wrapper{
+    width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 20%;
+      gap:10%
+  }
+
+  
+
 
