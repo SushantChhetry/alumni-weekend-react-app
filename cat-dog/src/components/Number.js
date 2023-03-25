@@ -8,7 +8,7 @@ const Number = ({ num }) => {
       if (count < num) {
         setCount(count + 1);
       }
-    }, 100);
+    }, 5);
     return () => clearInterval(intervalId);
   }, [num, count]);
 

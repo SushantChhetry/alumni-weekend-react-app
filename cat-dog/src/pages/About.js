@@ -5,8 +5,9 @@ const About = () => {
   return (
     <div className="about-wrapper">
       <h2>Number of Alumnis</h2>
-      <Number num={100} />
-      <p></p>
+      <p>
+        <Number num={2000} /> +
+      </p>
     </div>
   );
 };

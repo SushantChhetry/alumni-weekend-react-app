@@ -14,8 +14,8 @@ const Contact = () => {
     console.log(message);
   };
   return (
-    <div>
-      <h3>RSVP</h3>
+    <div className="form-wrapper">
+      <h1>RSVP</h1>
 
       <form className="form">
         <label>Full name</label>
