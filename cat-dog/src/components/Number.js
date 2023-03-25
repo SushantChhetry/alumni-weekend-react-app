@@ -12,6 +12,6 @@ const Number = ({ num }) => {
     return () => clearInterval(intervalId);
   }, [num, count]);
 
-  return <div className="number">{count}</div>;
+  return <div className="number">{count}+</div>;
 };
 export default Number;
