@@ -7,25 +7,46 @@ const Contact = () => {
 
   const [message, setMessage] = useState("");
 
-  const onSubmit = () => {
-    alert(`submitted`);
-    console.log(name);
-    console.log(email);
-    console.log(message);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const response = await fetch("/api/mail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    const data = await response.json();
+    console.log(data);
   };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
   return (
     <div className="form-wrapper">
       <h1>RSVP</h1>
-
-      <form className="form">
+      <p>Please enter your information</p>
+      <br />
+      <form className="form" onSubmit={handleSubmit}>
         <label>Full name</label>
         <input
           type="text"
           id="name"
           required
-          onChange={(e) => {
-            setName(e.target.innerHTML);
-          }}
+          value={formData.name}
+          onChange={handleChange}
         ></input>
         <label>Email</label>
 
@@ -33,18 +54,16 @@ const Contact = () => {
           type="email"
           id="email"
           required
-          onChange={(e) => {
-            setEmail(e.target.innerHTML);
-          }}
+          value={formData.email}
+          onChange={handleChange}
         ></input>
         <label>Message:</label>
 
         <textarea
           id="message"
           required
-          onChange={(e) => {
-            setMessage(e.target.innerHTML);
-          }}
+          value={formData.message}
+          onChange={handleChange}
         ></textarea>
         <button type="submit">Send</button>
       </form>

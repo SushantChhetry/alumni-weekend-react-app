@@ -42,6 +42,7 @@ export default function Home() {
         <About />
         <Event />
         <Contact />
+        <Footer />
       </main>
     </>
   );

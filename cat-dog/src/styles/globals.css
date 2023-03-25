@@ -157,7 +157,7 @@ label {
 }
 
 button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: rgb(119, 28, 28);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -185,11 +185,16 @@ button[type="submit"]:hover {
   .about{
     padding: 1%;
   }
+  
 
   .form-wrapper{
     width: 100vw;
     height: 100vh;
     padding: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .form-wrapper h1{
