@@ -225,6 +225,11 @@ button[type="submit"]:hover {
       text-align: center;
       padding: 20%;
       justify-content: space-around;
+      
+  }
+
+  .event-wrapper > h1{
+    font-family: 'Dancing Script', cursive;
   }
 
   .event{
@@ -263,4 +268,71 @@ button[type="submit"]:hover {
     width: 100vw;
     height: 100vh;
   }
+
+.globe-icon:hover {
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.about-image {
+  width: 0vw;
+  height: 0vh;
+}
+
+.about-image>img {
+  width: 0;
+}
+/* styles for screens larger than 600px */
+@media only screen and (min-width: 600px) {
+  .event {
+      padding: 1%;
+      margin: 1%;
+    }
+
+    form{
+      width: 50%;
+    }
+
+    .about-main{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .about-wrapper{
+      width: 50vw;
+      height: 100%;
+    }
+
+    .about-image{
+      width: 50vw;
+      height: 100%;
+      padding: 5%;
+        overflow: hidden;
+    }
+
+    .about-image > img {
+        width: 100%;
+        height: auto;
+        display: block;
+          transition: transform 0.5s ease;
+    }
+
+    .about-image > img:hover {
+     
+          transform: scale(1.2);
+        
+    }
+
+}
+
 

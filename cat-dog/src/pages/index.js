@@ -40,7 +40,11 @@ export default function Home() {
               <h1>Young Alumni</h1>
               <h1>Weekend</h1>
               <br />
-              <FontAwesomeIcon icon={faGlobe} size="2xl" />
+              <FontAwesomeIcon
+                icon={faGlobe}
+                size="2xl"
+                className="globe-icon"
+              />
             </div>
             <div className="countdown-wrapper">
               <p>See you in</p>
