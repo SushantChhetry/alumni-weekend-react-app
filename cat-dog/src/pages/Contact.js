@@ -1,37 +1,40 @@
 import { useState, useEffect } from "react";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-
-  const [email, setEmail] = useState("");
-
-  const [message, setMessage] = useState("");
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const response = await fetch("/api/mail", {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { name, email, message } = formData;
+
+    const requestOptions = {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    };
+
+    try {
+      const response = await fetch("/api/send-email", requestOptions);
+      const data = await response.json();
+      console.log("Message sent successfully:", data.message);
+    } catch (error) {
+      console.log("Error sending message:", error);
+    }
+
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
     });
-    const data = await response.json();
-    console.log(data);
   };
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -39,33 +42,34 @@ const Contact = () => {
       <h1>RSVP</h1>
       <p>Please enter your information</p>
       <br />
-      <form className="form" onSubmit={handleSubmit}>
-        <label>Full name</label>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="name">Name:</label>
         <input
           type="text"
           id="name"
-          required
+          name="name"
           value={formData.name}
           onChange={handleChange}
-        ></input>
-        <label>Email</label>
+        />
 
+        <label htmlFor="email">Email:</label>
         <input
           type="email"
           id="email"
-          required
+          name="email"
           value={formData.email}
           onChange={handleChange}
-        ></input>
-        <label>Message:</label>
+        />
 
+        <label htmlFor="message">Message:</label>
         <textarea
           id="message"
-          required
+          name="message"
           value={formData.message}
           onChange={handleChange}
         ></textarea>
-        <button type="submit">Send</button>
+
+        <button type="submit">Send message</button>
       </form>
     </div>
   );
