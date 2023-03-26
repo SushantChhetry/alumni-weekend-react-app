@@ -292,6 +292,30 @@ button[type="submit"]:hover {
 .about-image>img {
   width: 0;
 }
+
+.event-image {
+  width: 0vw;
+  height: 0vh;
+}
+
+.event-image>img {
+  width: 0;
+}
+
+.gallery-main{
+  background-color: #B11928;
+}
+
+.gallery-wrapper{
+  color: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+    height: 100vh;
+}
+
 /* styles for screens larger than 600px */
 @media only screen and (min-width: 600px) {
   .event {
@@ -333,6 +357,62 @@ button[type="submit"]:hover {
         
     }
 
+    .event-wrapper{
+      width:50vw;
+      padding: 10%;
+    }
+
+    .event{
+      padding:5%
+    }
+
+    .event-main{
+      display: flex;
+      flex-direction: row;
+
+    }
+
+        .event-image {
+          width: 50vw;
+          height: 100%;
+          padding: 5%;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+        }
+    
+        .event-image>img {
+          width: 70%;
+          height: auto;
+          display: block;
+          transition: transform 0.5s ease;
+        }
+    
+        .event-image>img:hover {
+    
+          transform: scale(1.2);
+    
+        }
+
+}
+.event-button {
+  padding: 5px 10px;
+  background-color: wheat;
+  border: 2px solid #000;
+  border-radius: 20px;
+  color: #000;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-top: 5px;
 }
 
+.event-button:hover {
+  background-color: #B11928;
+  color: #fff;
+}
 
+.nav-list{
+  list-style: none;
+}

@@ -10,6 +10,7 @@ import About from "./About";
 import Event from "./Event";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import Gallery from "./Gallery";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,9 +53,18 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Event />
-        <About />
-        <Contact />
+        <section id="event">
+          <Event />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+        <section id="gallery">
+          <Gallery />
+        </section>
         <Footer />
       </main>
     </>

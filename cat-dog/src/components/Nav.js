@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
@@ -12,6 +12,10 @@ const Nav = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    setIsOpen(false);
+  }, []);
+
   return (
     <div className="nav">
       <button onClick={toggleMenu}>
@@ -20,10 +24,41 @@ const Nav = () => {
           <div className="mobile-menu">{}</div>
         ) : (
           <div className="desktop-menu">
-            <p className="nav">Event</p>
-            <p className="nav">About</p>
-            <p className="nav">Contact</p>
-            <p className="nav">Donate</p>
+            <ul className="nav-list">
+              <li>
+                <Link href="/" legacyBehavior>
+                  <a>Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="#event" legacyBehavior>
+                  <a>Event</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="#about" legacyBehavior>
+                  <a>About</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="#contact" legacyBehavior>
+                  <a>Contact</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="#gallery" legacyBehavior>
+                  <a>Gallery</a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.jsu.edu/ihopreunion/give-back.html"
+                  legacyBehavior
+                >
+                  <a target="_blank">Donate</a>
+                </Link>
+              </li>
+            </ul>
           </div>
         )}
       </button>
