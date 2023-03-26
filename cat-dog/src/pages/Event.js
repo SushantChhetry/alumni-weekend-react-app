@@ -31,7 +31,7 @@ const Event = () => {
 
   return (
     <div className="event-wrapper">
-      <h1>Event</h1>
+      <h1>Events</h1>
       {events.map((event, key) => {
         return (
           <div className="event" id={key}>

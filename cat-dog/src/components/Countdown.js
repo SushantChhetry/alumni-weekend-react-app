@@ -20,8 +20,8 @@ const Countdown = ({ targetDate }) => {
     <div>
       {" "}
       <div>
-        <h2>
-          {days} days {hours} hours {minutes} min {seconds} sec
+        <h2 className="countdown">
+          {days} : {hours} : {minutes} : {seconds}
         </h2>
       </div>
     </div>

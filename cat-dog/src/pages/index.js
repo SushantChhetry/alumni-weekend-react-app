@@ -11,6 +11,8 @@ import group from "../img/group.jpg";
 import Contact from "./Contact";
 import About from "./About";
 import Event from "./Event";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,20 +29,30 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <main>
         <Nav />
         <div className="body-wrapper">
-          <div className="body"></div>
-          <Countdown targetDate={targetDate} />
-          <div className="button-wrapper">
-            <button className="bodybtn">Events</button>
-            <button className="bodybtn">RSVP</button>
-            <button className="bodybtn">Donate</button>
+          <div className="body">
+            <div className="yaw">
+              <h6 className="header">International House</h6>
+              <h1>Young Alumni</h1>
+              <h1>Weekend</h1>
+              <br />
+              <FontAwesomeIcon icon={faGlobe} size="2xl" />
+            </div>
+            <div className="countdown-wrapper">
+              <p>See you in</p>
+              <Countdown targetDate={targetDate} />
+            </div>
           </div>
         </div>
-        <About />
         <Event />
+        <About />
         <Contact />
         <Footer />
       </main>

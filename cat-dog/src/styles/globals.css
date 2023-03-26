@@ -45,7 +45,6 @@ img{
 
 .navbtn{
   color: wheat;
-  font-size: 5vw
 }
 
 .nav{
@@ -64,10 +63,15 @@ img{
 }
 
 .body{
-  width: 100%;
-  background-color: rgb(119, 28, 28);
-  height: 60vh;
+  width: 100vw;
+  background-color: #B11928;
+  height: 100vh;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+    padding: 10%;
 }
 
 .bodybtn{
@@ -131,6 +135,18 @@ img{
   animation-fill-mode: forwards;
 }
 
+.countdown-wrapper{
+  color: wheat;
+  text-align: center;
+}
+
+.yaw{
+  text-align: center;
+  color: wheat;
+  font-family: 'Dancing Script', cursive;
+  font-size: x-large;
+}
+
 form {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   max-width: 500px;
@@ -157,7 +173,7 @@ label {
 }
 
 button[type="submit"] {
-  background-color: rgb(119, 28, 28);
+  background-color: #B11928;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -173,7 +189,7 @@ button[type="submit"]:hover {
 .about-wrapper{
     width: 100vw;
       height: 100vh;
-      background-color: rgb(119, 28, 28);
+      background-color:#B11928;
       color: white;
       text-align: center;
       padding: 15%;
@@ -213,7 +229,7 @@ button[type="submit"]:hover {
 
   .event{
     color: wheat;
-    background-color: rgb(119, 28, 28);
+    background-color: #B11928;
     padding: 10%;
   }
   
@@ -222,4 +238,24 @@ button[type="submit"]:hover {
     color: wheat;
   }
 
+
+  .nav{
+    color:#fff
+  }
+
+  .countdown{
+    color: wheat;
+  }
+
+  .header{
+  font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    padding: 2rem 0;
+    
+  }
 
