@@ -26,11 +26,6 @@ const Nav = () => {
           <div className="desktop-menu">
             <ul className="nav-list">
               <li>
-                <Link href="/" legacyBehavior>
-                  <a>Home</a>
-                </Link>
-              </li>
-              <li>
                 <Link href="#event" legacyBehavior>
                   <a>Event</a>
                 </Link>

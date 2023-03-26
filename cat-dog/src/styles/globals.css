@@ -334,7 +334,7 @@ button[type="submit"]:hover {
 
     .about-wrapper{
       width: 50vw;
-      height: 100%;
+      height: 100vh;
     }
 
     .about-image{
@@ -355,6 +355,10 @@ button[type="submit"]:hover {
      
           transform: scale(1.2);
         
+    }
+
+    .about{
+      padding: 5%;
     }
 
     .event-wrapper{
@@ -415,4 +419,8 @@ button[type="submit"]:hover {
 
 .nav-list{
   list-style: none;
+}
+
+li {
+  margin: 0.5rem 0;
 }
