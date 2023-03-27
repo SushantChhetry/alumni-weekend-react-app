@@ -41,6 +41,7 @@ img{
     color: #fff;
     padding: 1rem;
     margin: 0;
+    z-index: 3;
 }
 
 .navbtn{
@@ -216,6 +217,20 @@ button[type="submit"]:hover {
   .form-wrapper h1{
     padding: 4%;
   }
+
+  form{
+      position: relative;
+        z-index: 1;
+  }
+
+    .submitted-message {
+      transform: translate(-10%, -100%);
+      z-index: 2;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
 
   .event-wrapper{
     width: 100vw;

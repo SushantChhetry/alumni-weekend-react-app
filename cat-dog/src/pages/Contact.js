@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 
 const Contact = () => {
+  const [showPop, setShowPop] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -9,9 +12,9 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const { name, email, message } = formData;
-
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -19,11 +22,16 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch("/api/send-email", requestOptions);
+      const response = await fetch("/api/send-mail", requestOptions);
       const data = await response.json();
+
       console.log("Message sent successfully:", data.message);
+      setLoading(false);
+
+      setShowPop(true);
     } catch (error) {
       console.log("Error sending message:", error);
+      setLoading(false);
     }
 
     setFormData({
@@ -39,7 +47,7 @@ const Contact = () => {
 
   return (
     <div className="form-wrapper">
-      <h1>RSVP</h1>
+      <h1>Contact us!</h1>
       <p>Please enter your information</p>
       <br />
       <form onSubmit={handleSubmit}>
@@ -71,6 +79,13 @@ const Contact = () => {
 
         <button type="submit">Send message</button>
       </form>
+      <div className="loading">{loading && <p>Submitting...</p>}</div>
+      {showPop && (
+        <div className="submitted-message">
+          <p>Your form has been submitted!</p>
+          <button onClick={() => setShowPop(false)}>Close</button>
+        </div>
+      )}
     </div>
   );
 };

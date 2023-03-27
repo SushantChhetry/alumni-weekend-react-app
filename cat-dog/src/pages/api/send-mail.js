@@ -4,20 +4,20 @@ export default async function handler(req, res) {
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
+    host: "smtp.office365.com",
+    port: 587,
+    secure: false,
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
+      user: "sushantchhetry@outlook.com",
+      pass: "testing1234!",
     },
   });
 
   const mailOptions = {
-    from: email,
-    to: process.env.EMAIL_TO,
+    from: "sushantchhetry@outlook.com",
+    to: "sushantchhetry@outlook.com",
     subject: `New message from ${name}`,
-    text: message,
+    text: message + " email:" + email,
   };
 
   try {
