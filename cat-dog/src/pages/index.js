@@ -11,6 +11,7 @@ import Event from "./Event";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import Gallery from "./Gallery";
+import Router from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Young Alumni Weekend</title>
+        <title>Youg Alumni Weekend</title>
         <meta
           name="description"
           content="Website for the Young Alumni Weekend"
@@ -70,3 +71,13 @@ export default function Home() {
     </>
   );
 }
+
+Home.getInitialProps = async ({ req, res }) => {
+  // Check if the user has entered the correct password
+  if (req && req.cookies && req.cookies.password !== "myPassword") {
+    res.writeHead(302, { Location: "/Password" });
+    res.end();
+  }
+
+  return {};
+};

@@ -13,7 +13,7 @@ const Nav = () => {
   };
 
   useEffect(() => {
-    setIsOpen(false);
+    setIsOpen(true);
   }, []);
 
   return (

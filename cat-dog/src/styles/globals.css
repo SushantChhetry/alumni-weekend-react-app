@@ -439,3 +439,51 @@ button[type="submit"]:hover {
 li {
   margin: 0.5rem 0;
 }
+
+
+.password-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+  background-color: #B11928;
+  width: 100vw;
+  height: 100vh;
+  color: wheat;
+}
+
+.password-form {
+  background-color: transparent;
+  margin: 3%;
+  border: 0;
+  text-align: center;
+}
+
+/* Style the input fields */
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style the submit button */
+.pwd-btn{
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.yaw-pwd{
+  text-align: center;
+    color: wheat;
+    font-family: 'Dancing Script', cursive;
+}
