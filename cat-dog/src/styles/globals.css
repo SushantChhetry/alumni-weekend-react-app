@@ -8,6 +8,7 @@
 html {
   font-size: 16px;
   font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* Set body margin and text color */
@@ -428,7 +429,7 @@ button[type="submit"]:hover {
 }
 
 .event-button:hover {
-  background-color: #B11928;
+  background-color: rgb(177, 25, 40);
   color: #fff;
 }
 
@@ -440,6 +441,12 @@ li {
   margin: 0.5rem 0;
 }
 
+.password-main{
+  background-color: transparent;
+    background-image: url('../img/group.jpg');
+    background-size: cover;
+      background-position: center center;
+}
 
 .password-wrapper{
   display: flex;
@@ -447,14 +454,15 @@ li {
   justify-content: center;
   align-items: center;
   padding: 10%;
-  background-color: #B11928;
+  background-color: rgba(177, 25, 40,0.75);
+ 
   width: 100vw;
   height: 100vh;
   color: wheat;
+  
 }
 
 .password-form {
-  background-color: transparent;
   margin: 3%;
   border: 0;
   text-align: center;
