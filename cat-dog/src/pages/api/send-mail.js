@@ -8,8 +8,8 @@ export default async function handler(req, res) {
     port: 587,
     secure: false,
     auth: {
-      user: "sushantchhetry@outlook.com",
-      pass: "testing1234!",
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
     },
   });
 
