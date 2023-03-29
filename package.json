@@ -10,5 +10,8 @@
     "nodemailer": "^6.9.1",
     "react-bootstrap": "^2.7.2",
     "swiper": "^9.1.1"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
