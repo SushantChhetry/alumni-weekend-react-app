@@ -37,7 +37,7 @@ const Event = () => {
         <Image src="/img/img2.jpg" alt="event-image" width={500} height={500} />
       </div>
       <div className="event-wrapper">
-        <h1>Evens</h1>
+        <h1>Events</h1>
         {events.map((event, key) => {
           return (
             <div className="event" id={key}>
