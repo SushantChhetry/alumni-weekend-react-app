@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 const Event = () => {
+  // This type of data should probably live somewhere else
   const events = [
     {
       title: "Welcome Mixer",

@@ -15,6 +15,9 @@ import Router from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Not sure if you forgot to remove this file, but no file should have a space in the name
+// Also always remove unused vars/imports
+
 export default function Home() {
   const targetDate = new Date("2023-04-21T23:59:59").getTime();
 

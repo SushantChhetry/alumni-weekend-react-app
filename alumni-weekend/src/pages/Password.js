@@ -10,6 +10,8 @@ const Password = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    // Password should never live within the code nor stored in cookies.
+    // I'm assuming you did it like this since its not that big of a deal of a page
     if (password === "ih4ever") {
       router.push("/");
     } else {

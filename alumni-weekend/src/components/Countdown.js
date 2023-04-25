@@ -4,6 +4,8 @@ const Countdown = ({ targetDate }) => {
   const [countdown, setCountdown] = useState(targetDate - new Date().getTime());
 
   useEffect(() => {
+    // Use effect gets executed at every rerender meaning this interval being cleared twice
+    // Not a big deal, but something to call out
     const intervalId = setInterval(() => {
       setCountdown(targetDate - new Date().getTime());
     }, 1000);
@@ -18,6 +20,7 @@ const Countdown = ({ targetDate }) => {
 
   return (
     <div>
+      {/* Why the below? */}
       {" "}
       <div>
         <h2 className="countdown">

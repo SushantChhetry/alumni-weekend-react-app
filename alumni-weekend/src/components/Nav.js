@@ -7,12 +7,14 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
+    // Never leave console logs
     console.log(isOpen);
 
     setIsOpen(!isOpen);
   };
 
   useEffect(() => {
+    // Why did you go with this approach rather than defaulting the state to true?
     setIsOpen(true);
   }, []);
 
@@ -21,6 +23,7 @@ const Nav = () => {
       <button onClick={toggleMenu}>
         <FontAwesomeIcon icon={faBars} className="navbtn" size="2xl" />
         {isOpen ? (
+          // I feel like you forgot something here {} ?
           <div className="mobile-menu">{}</div>
         ) : (
           <div className="desktop-menu">
