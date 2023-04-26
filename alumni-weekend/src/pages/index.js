@@ -1,7 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import Countdown from "@/components/Countdown";
@@ -11,9 +8,6 @@ import Event from "./Event";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import Gallery from "./Gallery";
-import Router from "next/router";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const targetDate = new Date("2023-04-21T23:59:59").getTime();

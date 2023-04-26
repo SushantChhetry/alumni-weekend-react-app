@@ -4,17 +4,12 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleMenu = () => {
-    console.log(isOpen);
 
     setIsOpen(!isOpen);
   };
-
-  useEffect(() => {
-    setIsOpen(true);
-  }, []);
 
   return (
     <div className="nav">

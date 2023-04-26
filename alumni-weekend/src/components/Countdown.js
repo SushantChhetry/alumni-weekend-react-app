@@ -18,7 +18,6 @@ const Countdown = ({ targetDate }) => {
 
   return (
     <div>
-      {" "}
       <div>
         <h2 className="countdown">
           {days} d {hours} h {minutes} m {seconds} s
